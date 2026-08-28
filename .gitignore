@@ -1,0 +1,8 @@
+.env
+node_modules/
+
+# Internal working files — not needed for the published site
+figjam-full.json
+figma-structure.json
+fetch_images.py
+.DS_Store

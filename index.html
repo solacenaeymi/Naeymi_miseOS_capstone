@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiseOS: Kitchen Ordering &amp; Inventory System | Solace Naeymi</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="assets/images/miseos-logo.png" alt="MiseOS logo"> SOLACE NAEYMI</a>
+    <nav>
+      <a href="#background">Background</a>
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#audience">Audience</a>
+      <a href="#process">Process</a>
+      <a href="#outcome">Outcome</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">UX Capstone Case Study</p>
+        <h1>MiseOS: Kitchen Ordering &amp; Inventory System</h1>
+        <p class="lede">A recipe-driven ordering and inventory tool that helps specialty and fine-dining kitchens forecast ingredient needs accurately, cutting the guesswork out of over- and under-ordering.</p>
+        <div class="meta-row">
+          <div class="meta-item">
+            <div class="label">Timeline</div>
+            <div class="value">16 weeks, Capstone I &amp; II</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Role</div>
+            <div class="value">UX Researcher &amp; Designer</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Tools</div>
+            <div class="value">Figma, FigJam</div>
+          </div>
+          <div class="meta-item">
+            <div class="label">Methods</div>
+            <div class="value">Interviews, Competitive Analysis, Affinity Mapping, Usability Testing, Prototyping</div>
+          </div>
+        </div>
+      </div>
+      <figure class="hero-image">
+        <img src="assets/images/hero-produce.png" alt="A crate of fresh farmers-market produce: beets, radishes, cabbage, zucchini, garlic, and berries, representing the specialty ingredients MiseOS is designed around">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap">
+    <p class="section-label">Background</p>
+    <h2>Why MiseOS</h2>
+    <p class="lead">MiseOS is an iPad app that gives chefs and restaurant owners a fast, low-effort way to forecast ingredient quantities. It grew out of a simple observation from my years working in restaurants: the kitchens that ran smoothest weren't the ones with the most talented chefs, they were the ones where someone had reduced ordering to a system.</p>
+    <p>Small, specialty, and fine-dining restaurants source from local farms and specialty suppliers who offer limited quantities and little flexibility for last-minute changes. Most chefs are forecasting from memory, instinct, and a stack of spreadsheets; under real time pressure, with real financial consequences.</p>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="wrap">
+    <p class="section-label">Problem</p>
+    <h2>What Problem Was I Solving?</h2>
+    <p class="lead">Specialty chefs need a fast, low-effort way to forecast ingredient quantities accurately, because getting this wrong either wastes food and money or leaves them short mid-service — but existing methods (manual math, spreadsheets, gut instinct) pull them away from the actual craft of cooking and don't scale well as recipes or order volume change.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Who</h4>
+        <p>Restaurants: directly chefs and owners, and guests. Indirectly, front-of-house staff managing an 86'd dish.</p>
+      </div>
+      <div class="card">
+        <h4>What</h4>
+        <p>Food waste, or not enough product: dishes get 86'd. Chefs often lack the math acumen, time, or energy to order precisely.</p>
+      </div>
+      <div class="card">
+        <h4>When</h4>
+        <p>Depending on the restaurant, a daily or weekly issue: every ordering cycle carries the same risk.</p>
+      </div>
+      <div class="card">
+        <h4>Where</h4>
+        <p>In restaurants, most acutely in small, specialty, and fine-dining kitchens sourcing from limited-flexibility suppliers.</p>
+      </div>
+      <div class="card">
+        <h4>Why It Happens</h4>
+        <p>Chefs incorrectly account for the amount of food needed, over- or under-ordering, with no systematic check.</p>
+      </div>
+      <div class="card">
+        <h4>Why It Matters</h4>
+        <p>Eliminating food waste and controlling overhead is critical as food costs keep rising for restaurants of every size.</p>
+      </div>
+    </div>
+
+    <h3>Assumptions Vs. Unknowns Going In</h3>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Assumptions</h4>
+        <ul>
+          <li>Chefs tend to over-order to avoid running out, hoping to roll over ingredients with longer shelf life.</li>
+          <li>Restaurants would rather over-order slightly than under-order and 86 a dish.</li>
+          <li>Most chefs don't have the time or energy for in-depth inventory calculations.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Unknowns</h4>
+        <ul>
+          <li>How do chefs actually decide how much to order?</li>
+          <li>How much does over-ordering affect the bottom line?</li>
+          <li>Why haven't smaller restaurants adopted existing tools like Restaurant365?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solution">
+  <div class="wrap">
+    <p class="section-label">Concept / Solution</p>
+    <h2>The Proposed Solution</h2>
+    <p class="lead">MiseOS turns a chef's own recipes into the source of truth for ordering: auto-calculating suggested orders from reservations, sales history, and recipe data, instead of asking chefs to do that math by hand.</p>
+
+    <div class="shot-row solo">
+      <figure class="shot">
+        <img src="assets/images/solution-mockup-1.png" alt="Early hand-sketched wireframe of the suggested order concept, showing reservation counts and on-hand item quantities">
+        <figcaption>One of the earliest sketches of the "suggested order" concept, comparing reservations against on-hand stock.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Core User Stories</h3>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Suggested Ordering</h4>
+        <p>As a chef, I want to see a suggested order automatically calculated from upcoming reservations and past service data, so I can place an accurate order in minutes rather than cross-referencing multiple records.</p>
+      </div>
+      <div class="card">
+        <h4>Recipe Scaling</h4>
+        <p>As a chef, I want to input recipes for each menu item and scale them to my expected cover count, so my ingredient needs are calculated precisely and reflected automatically in my suggested order.</p>
+      </div>
+      <div class="card">
+        <h4>Kitchen-Matched Inventory</h4>
+        <p>As a chef, I want to organize my inventory into sections that match my kitchen's physical layout, so I can walk through and assess stock quickly without switching screens or missing anything.</p>
+      </div>
+      <div class="card">
+        <h4>Cost Visibility</h4>
+        <p>As a chef, I want to see my daily ordering spend compared to last week and last year, so I can catch cost creep early and adjust before it becomes a budget problem.</p>
+      </div>
+      <div class="card">
+        <h4>Budget Breakdown</h4>
+        <p>As a restaurant owner, I want to see a weekly spend breakdown by ingredient category against my set budget, so I can identify where food costs are running high and make informed decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audience">
+  <div class="wrap">
+    <p class="section-label">Target Audience</p>
+    <h2>Who I Designed For</h2>
+    <p class="lead">I determined the target audience through six semi-structured interviews with three executive chefs and three restaurant owners/operators across NYC restaurant groups, ranging from Michelin-starred fine dining to neighborhood wine bars. Two personas emerged from that research, representing the two roles who touch ordering decisions most directly.</p>
+
+    <div class="persona">
+      <div class="persona-header">
+        <img class="persona-avatar" src="assets/images/persona-chris.jpg" alt="Portrait representing Chris G., Executive Chef">
+        <div class="persona-id">
+          <p class="eyebrow-role">Executive Chef / Culinary Director, 36</p>
+          <h3>Chris G.</h3>
+          <p class="quote">"Speak to me like a Labrador: it needs to be easy to understand right off the bat."</p>
+        </div>
+      </div>
+      <div class="persona-body">
+      <dl>
+        <div>
+          <dt>Background</dt>
+          <dd>
+            <ul>
+              <li>Culinary director for a small NYC restaurant group: a diner, a natural wine bar, a French bistro</li>
+              <li>Oversees menus and kitchen operations across locations; delegates daily ordering to sous chefs</li>
+            </ul>
+          </dd>
+          <dt>Goals</dt>
+          <dd>
+            <ul>
+              <li>Reduce food spend through accurate, timely reporting</li>
+              <li>Serve planned menus without running out</li>
+              <li>Maintain consistent standards and cost control across locations</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Needs</dt>
+          <dd>
+            <ul>
+              <li>An easy, accurate system to guide daily and weekly ordering</li>
+              <li>Clear differentiation between case and unit amounts</li>
+              <li>One consolidated, comparable view of cost across locations</li>
+            </ul>
+          </dd>
+          <dt>Pain points</dt>
+          <dd>
+            <ul>
+              <li>Seasonal price shifts make static order guides inaccurate</li>
+              <li>Rising costs force trade-offs between price, quality, and guest favorites</li>
+              <li>Vendor errors are nearly impossible to fix once an invoice is signed</li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+      </div>
+    </div>
+
+    <h3>Chris G. — Current State</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h4>1. Reviewing Inventory</h4>
+        <p>Manual sales cross-referencing eats time; price shifts make guides go stale.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Focused, wary of stale data."</p>
+      </div>
+      <div class="card">
+        <h4>2. Planning Menus &amp; Costs</h4>
+        <p>No easy view of per-dish ingredient cost; rising costs force menu trade-offs.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Frustrated by cost trade-offs."</p>
+      </div>
+      <div class="card">
+        <h4>3. Placing Vendor Orders</h4>
+        <p>Signed invoices can't be corrected; small vendors force higher-stakes planning.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Anxious about irreversible errors."</p>
+      </div>
+      <div class="card">
+        <h4>4. Comparing Locations</h4>
+        <p>Limited visibility across locations; reports live in inconsistent formats.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Reassured, still time-pressed."</p>
+      </div>
+      <div class="card">
+        <h4>5. Delegating Standards</h4>
+        <p>Hard to keep oversight once delegated; no easy way to catch errors early.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Confident, cautious about gaps."</p>
+      </div>
+    </div>
+
+    <h3>Chris G. — Future State</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h4>1. Setting Up Recipes &amp; Pars</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Recipe &amp; Input Scaling</p>
+        <p>No more estimating from memory — menu edits ripple into ordering automatically.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Confident the system reflects his real menu."</p>
+      </div>
+      <div class="card">
+        <h4>2. Reviewing Suggested Orders</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Suggested Orders Homepage</p>
+        <p>Seasonal swings no longer throw off the order; no more manual cross-referencing.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Relieved, minutes instead of an hour."</p>
+      </div>
+      <div class="card">
+        <h4>3. Walking the Floor</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Ordering &amp; Inventory Guide</p>
+        <p>One organized view instead of switching screens; nothing gets missed.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"In control, nothing slips through."</p>
+      </div>
+      <div class="card">
+        <h4>4. Submitting the Order</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Suggested Orders Homepage</p>
+        <p>One motion from review to submission.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Efficient, still watchful at the door."</p>
+      </div>
+      <div class="card">
+        <h4>5. Reviewing Spend</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Financial Reporting Screen</p>
+        <p>One consolidated view replaces scattered reports; cost creep is visible daily.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Reassured — far less time compiling comparisons."</p>
+      </div>
+    </div>
+
+    <div class="persona">
+      <div class="persona-header">
+        <img class="persona-avatar" src="assets/images/persona-maria.jpg" alt="Portrait representing Maria D., Owner">
+        <div class="persona-id">
+          <p class="eyebrow-role">Owner, Front of House Operations, 40</p>
+          <h3>Maria D.</h3>
+          <p class="quote">"How can we prepare ourselves for the coming week of service while staying in budget?"</p>
+        </div>
+      </div>
+      <div class="persona-body">
+      <dl>
+        <div>
+          <dt>Background</dt>
+          <dd>
+            <ul>
+              <li>Owns a small NYC restaurant group; runs day-to-day operations, FOH, financial oversight, vendor management</li>
+              <li>Relies on manual tools: Excel trackers, self-built order guides, vendor sites</li>
+            </ul>
+          </dd>
+          <dt>Goals</dt>
+          <dd>
+            <ul>
+              <li>Run an efficient ordering process that minimizes waste and overspend</li>
+              <li>Keep food costs in line without sacrificing quality</li>
+              <li>Build reliable systems that don't depend entirely on her own vigilance</li>
+            </ul>
+          </dd>
+        </div>
+        <div>
+          <dt>Needs</dt>
+          <dd>
+            <ul>
+              <li>Tools that reduce manual entry and the errors it causes</li>
+              <li>A system simple enough to train new team members on quickly</li>
+              <li>Better integration of sales, labor, and purchasing data</li>
+            </ul>
+          </dd>
+          <dt>Pain points</dt>
+          <dd>
+            <ul>
+              <li>Manual guides and spreadsheets are time-consuming and error-prone</li>
+              <li>Vendor errors are nearly impossible to fix post-signature</li>
+              <li>Inexperienced staff over-order, invisible until it hits the P&amp;L</li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+      </div>
+    </div>
+
+    <h3>Maria D. — Current State</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h4>1. Forecasting the Week</h4>
+        <p>Forecasting relies on scattered manual sources; no clear link to par changes.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Proactive but uncertain."</p>
+      </div>
+      <div class="card">
+        <h4>2. Order Guides</h4>
+        <p>Manual guides are slow and error-prone; over-ordering hits the P&amp;L unnoticed.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Overwhelmed by manual entry."</p>
+      </div>
+      <div class="card">
+        <h4>3. Ordering &amp; Receiving</h4>
+        <p>Vendor errors are unfixable post-signature; inspecting every delivery takes real time.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"On edge over irreversible mistakes."</p>
+      </div>
+      <div class="card">
+        <h4>4. Reconciling Spend</h4>
+        <p>Reconciling separate tools is tedious; errors surface only after hitting the P&amp;L.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Reassured, still time-pressed."</p>
+      </div>
+      <div class="card">
+        <h4>5. Weekly Review</h4>
+        <p>Prepping reports eats into guest/staff time; relies on her personal vigilance.</p>
+        <p style="margin-top:10px; color:var(--accent); font-style:italic;">"Confident but stretched thin."</p>
+      </div>
+    </div>
+
+    <h3>Maria D. — Future State</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h4>1. Reviewing Suggested Orders</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Suggested Orders Homepage</p>
+        <p>No more piecing forecasts together. Pars stay grounded in real data.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Proactive, no longer starting from a blank page."</p>
+      </div>
+      <div class="card">
+        <h4>2. Confirming with Inventory Guide</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Ordering &amp; Inventory Guide</p>
+        <p>One organized screen instead of scattered spreadsheets.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Steadier, less second-guessing herself."</p>
+      </div>
+      <div class="card">
+        <h4>3. Placing &amp; Receiving Orders</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Suggested Orders Homepage</p>
+        <p>A clear record to check deliveries against.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Careful at the door, now with a record to lean on."</p>
+      </div>
+      <div class="card">
+        <h4>4. Tracking Spend in Real Time</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Financial Reporting Screen</p>
+        <p>Spend is visible all week, not just at reconciliation.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Relieved, catching issues while they're small."</p>
+      </div>
+      <div class="card">
+        <h4>5. Weekly Review with Budget Dashboard</h4>
+        <p style="text-transform:uppercase; font-size:11px; letter-spacing:0.06em; color:var(--accent); font-weight:700; margin-bottom:6px;">Feature: Financial Reporting Screen</p>
+        <p>Walks in with the report already built.</p>
+        <p style="margin-top:10px; color:var(--green); font-style:italic;">"Confident — sync time spent deciding, not compiling."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <p class="section-label">Process</p>
+    <h2>How I Got From Problem To Product</h2>
+    <div class="subnav">
+      <a href="#ideation">Ideation</a>
+      <a href="#research">Research</a>
+      <a href="#testing">Testing</a>
+      <a href="#evolution">Concept Evolution</a>
+      <a href="#user-flows">User Flows</a>
+      <a href="#visual-design">Visual Design</a>
+      <a href="#development">Development</a>
+    </div>
+
+    <div class="process-block" id="ideation">
+      <h3 style="margin-top:0;">Ideation</h3>
+      <p>Before landing on MiseOS, I explored several other directions rooted in hospitality: a shift and burnout companion for hospitality workers, and an artist-in-residence marketplace connecting hotels and restaurants with local artists. Revisiting old notebook pages, I found I'd sketched out ideas in this space even before the course began.</p>
+      <div class="shot-row">
+        <figure class="shot">
+          <img src="assets/images/ideation-notebook-1.png" alt="Handwritten notebook page exploring a shift and burnout companion app, and an artist-in-residence marketplace concept">
+          <figcaption>Early concept notes: ideas explored and set aside before settling on the food-ordering problem space.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/images/solution-mockup-2.png" alt="Hand-sketched wireframe exploring recipe and ingredient layout">
+          <figcaption>Sketching how a recipe's ingredients might map into an ordering calculation.</figcaption>
+        </figure>
+      </div>
+      <p>Once I landed on the restaurant ordering problem, ideation moved to a FigJam mindmap: an inventory app that integrates with POS to pull average order data, also pulling from reservation platforms like Resy, with recipes and dish components layered on top, and a strong emphasis on the result needing to be clear and easy to read at a glance.</p>
+    </div>
+
+    <div class="process-block" id="research">
+      <h3>Research</h3>
+      <p><strong>Competitive analysis.</strong> I looked at four platforms already operating in this space, to understand what was already solved well and where the gaps were for small and specialty operators:</p>
+      <div class="grid-2">
+        <div class="card">
+          <h4>Restaurant365 (Direct)</h4>
+          <p>Restaurant inventory software tailored to large-scale chains and fast food, integrated with POS. Higher costs deter smaller businesses from adopting it.</p>
+        </div>
+        <div class="card">
+          <h4>MarketMan (Direct)</h4>
+          <p>Simple design for inventory, with recipe management and in-house batch tracking (sauces, batched cocktails). A lot of detail can be captured per recipe.</p>
+        </div>
+        <div class="card">
+          <h4>MarginEdge (Direct)</h4>
+          <p>Practical, user-friendly, built by restaurant operators with service kept front of mind. "Simple is key" was the standout takeaway, and a name none of my interviewees had heard of going in.</p>
+        </div>
+        <div class="card">
+          <h4>Toast POS (Indirect)</h4>
+          <p>Built-in AI companion that can generate inventory from POS product data and accepts uploaded invoices, but as an added-cost module on top of a regular subscription, not a dedicated solution.</p>
+        </div>
+      </div>
+      <p style="margin-top:16px;">The throughline: dedicated platforms do their specific jobs well. The open question was how a new solution could seamlessly integrate into service alongside technology restaurant operators already use, rather than replacing it.</p>
+
+      <p><strong>User interviews.</strong> I conducted six semi-structured interviews (three executive chefs and three restaurant owners/operators) to understand how ordering decisions actually get made day to day.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Ian A., Executive Chef</h4>
+          <p>Built a custom order guide organized by kitchen workflow rather than ingredient type; uses Toast product-mix reports to estimate quantities per dish.</p>
+        </div>
+        <div class="card">
+          <h4>Julie L., Exec Chef / Culinary Director</h4>
+          <p>Runs a manual, supplier-organized daily inventory system; wants pars standardized since prep quantities vary widely by staff member.</p>
+        </div>
+        <div class="card">
+          <h4>Matt P., Sous Chef / Head Baker</h4>
+          <p>Keeps a manual Excel order guide updated daily; wants a simpler interface but is skeptical mistakes can ever be fully eliminated.</p>
+        </div>
+        <div class="card">
+          <h4>Bonnie W., GM / Bar Director</h4>
+          <p>Juggles multiple disconnected vendor tools and logins; full cost visibility only arrives at month-end financials.</p>
+        </div>
+        <div class="card">
+          <h4>Dave F., Owner / Consultant</h4>
+          <p>Has seen costly case-vs-unit ordering errors firsthand; believes any solution has to be "built for a labrador" to work for non-tech-savvy kitchens.</p>
+        </div>
+        <div class="card">
+          <h4>Martin T., Restaurant Owner</h4>
+          <p>Reviews cost/waste reports weekly against budget; wants a hands-off role that still lets him sanity-check spend against industry benchmarks.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:16px;"><strong>Synthesis.</strong> From open coding of these interviews, I built an affinity map of 15 thematic clusters: vendor relationships, the effects of 86'ing, food waste, unpredictability, rising food costs, human error, and more. Two patterns rose to the top: nearly every operator wanted an automated, POS-integrated ordering suggestion instead of "a glorified Excel," and any new system needed to be trainable in minutes given how little spare time kitchens have.</p>
+    </div>
+
+    <div class="process-block" id="testing">
+      <h3>Usability Testing — V1 Prototype</h3>
+      <p>Once the first interactive prototype (V1) was built, I tested six of its screens with three participants — Matt, Olivia, and Mel — end to end, then asked them to reflect on the experience as a whole.</p>
+
+      <div class="meta-row" style="border-top:none; padding-top:0; margin-top:24px;">
+        <div class="meta-item">
+          <div class="label">Participants</div>
+          <div class="value">3 testers</div>
+        </div>
+        <div class="meta-item">
+          <div class="label">Screens Tested</div>
+          <div class="value">6, end to end</div>
+        </div>
+        <div class="meta-item">
+          <div class="label">Avg. Ease of Navigation</div>
+          <div class="value">4.8 / 5 (Matt 5 · Olivia 5 · Mel 4.5)</div>
+        </div>
+      </div>
+
+      <h4 style="margin-top:32px;">What Worked</h4>
+      <div class="grid-2">
+        <div class="card">
+          <h4>Read Correctly, Signed In Fast</h4>
+          <p>Every participant immediately read the app as a restaurant ordering/prep tool, and all three signed in without friction.</p>
+        </div>
+        <div class="card">
+          <h4>Recipe Scaling Landed</h4>
+          <p>Testers found the cover-count control right away — "likes the simplicity, and it does look very helpful."</p>
+        </div>
+        <div class="card">
+          <h4>Financial Reporting Was Clear</h4>
+          <p>"Was able to understand right away." The weekly product-mix breakdown stood out as "really helpful."</p>
+        </div>
+        <div class="card">
+          <h4>Inventory Sections Made Sense</h4>
+          <p>Walk-In Cooler / Dry Storage / Freezer sections felt intuitive, and testers found "Add Section" without prompting.</p>
+        </div>
+      </div>
+
+      <h4 style="margin-top:32px;">From Feedback to Refinement</h4>
+      <p>Every recurring request became a specific input for the V2 refinements shown next.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h4>Recipe Input &amp; Scaling</h4>
+          <p><em>"Ordering vs. serving portions get confused, and prep waste isn't accounted for."</em><br><strong>&rarr; Added a par column</strong> showing what's needed to prep, separate from what's ordered.</p>
+        </div>
+        <div class="card">
+          <h4>Inventory Guide</h4>
+          <p><em>"Units of measure aren't consistent — dry storage is ordered by case, protein by the pound."</em><br><strong>&rarr; Added a unit-of-measure column</strong> so each item shows how it's actually ordered.</p>
+        </div>
+        <div class="card">
+          <h4>Financial Reporting</h4>
+          <p><em>"Product mix needs more detail, and one week alone isn't enough context."</em><br><strong>&rarr; Broke spend down by dish</strong> and added a same-day-last-week comparison.</p>
+        </div>
+        <div class="card">
+          <h4>Ordering</h4>
+          <p><em>"Testers wanted to see the week's covers to help ensure orders are correct."</em><br><strong>&rarr; Full week's booked covers</strong> now display alongside the suggested order.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-block" id="evolution">
+      <h3>Concept Evolution</h3>
+      <p>Screens went through three real stages: paper-thin wireframes to validate structure, a first interactive prototype (V1), and a refined second prototype (V2) after testing and feedback. Comparing the same screen across versions shows where the thinking actually changed, not just visual polish.</p>
+
+      <h4 style="margin-top:32px;">Homepage</h4>
+      <div class="compare">
+        <figure class="shot">
+          <span class="tag v1" style="margin:16px 0 0 16px; display:inline-block;">Wireframe</span>
+          <img src="assets/images/wireframe-chef-welcome.png" alt="Low-fidelity wireframe of the chef homepage screen">
+        </figure>
+        <figure class="shot">
+          <span class="tag v2" style="margin:16px 0 0 16px; display:inline-block;">V2 (Final)</span>
+          <img src="assets/images/v2-welcome.png" alt="Final high-fidelity homepage screen">
+        </figure>
+      </div>
+
+      <h4 style="margin-top:32px;">Financial Reporting</h4>
+      <div class="compare">
+        <figure class="shot">
+          <span class="tag v1" style="margin:16px 0 0 16px; display:inline-block;">V1</span>
+          <img src="assets/images/v1-financial.png" alt="First prototype version of the financial reporting screen">
+        </figure>
+        <figure class="shot">
+          <span class="tag v2" style="margin:16px 0 0 16px; display:inline-block;">V2 (Final)</span>
+          <img src="assets/images/v2-financial.png" alt="Refined final version of the financial reporting screen">
+        </figure>
+      </div>
+
+      <h4 style="margin-top:32px;">Recipe Box</h4>
+      <div class="compare">
+        <figure class="shot">
+          <span class="tag v1" style="margin:16px 0 0 16px; display:inline-block;">Wireframe</span>
+          <img src="assets/images/wireframe-recipe-box.png" alt="Low-fidelity wireframe of the recipe box screen">
+        </figure>
+        <figure class="shot">
+          <span class="tag v2" style="margin:16px 0 0 16px; display:inline-block;">V1/2 (Final)</span>
+          <img src="assets/images/v2-recipe-box-active.png" alt="Final high-fidelity recipe box screen">
+        </figure>
+      </div>
+
+      <h4 style="margin-top:32px;">Recipe Input &amp; Scaling</h4>
+      <div class="compare">
+        <figure class="shot">
+          <span class="tag v1" style="margin:16px 0 0 16px; display:inline-block;">Wireframe</span>
+          <img src="assets/images/wireframe-recipe-builder.png" alt="Low-fidelity wireframe of the recipe builder screen">
+        </figure>
+        <figure class="shot">
+          <span class="tag v2" style="margin:16px 0 0 16px; display:inline-block;">V1/2 (Final)</span>
+          <img src="assets/images/v2-recipe-builder-1.png" alt="Final high-fidelity recipe input and scaling screen">
+        </figure>
+      </div>
+
+      <h4 style="margin-top:32px;">Inventory Guide</h4>
+      <div class="compare">
+        <figure class="shot">
+          <span class="tag v1" style="margin:16px 0 0 16px; display:inline-block;">V1</span>
+          <img src="assets/images/v1-inventory-all.png" alt="First prototype version of inventory management screen">
+        </figure>
+        <figure class="shot">
+          <span class="tag v2" style="margin:16px 0 0 16px; display:inline-block;">V2 (Final)</span>
+          <img src="assets/images/v2-inventory-all.png" alt="Refined final version of inventory management screen">
+        </figure>
+      </div>
+
+      <h4 style="margin-top:32px;">Ordering Page</h4>
+      <div class="compare">
+        <figure class="shot">
+          <span class="tag v1" style="margin:16px 0 0 16px; display:inline-block;">Wireframe</span>
+          <img src="assets/images/wireframe-suggested-order.png" alt="Low-fidelity wireframe of the suggested order screen">
+        </figure>
+        <figure class="shot">
+          <span class="tag v2" style="margin:16px 0 0 16px; display:inline-block;">V2 (Final)</span>
+          <img src="assets/images/v2-suggested-order.png" alt="Final high-fidelity suggested order screen">
+        </figure>
+      </div>
+    </div>
+
+    <div class="process-block" id="user-flows">
+      <h3>User Flows</h3>
+      <p>Four core flows, walked through step by step: what triggers each one, what the system and the user each do, and what it resolves to.</p>
+
+      <h4 style="margin-top:32px;">Suggested Ordering</h4>
+      <p style="font-style:italic; margin-bottom:16px;">"As a chef, I want an auto-calculated suggested order so I can place an accurate order in minutes."</p>
+      <div class="grid-3">
+        <div class="card"><h4>Trigger</h4><p>Opens Suggested Orders Homepage — chef/manager starts an ordering session ahead of an upcoming service.</p></div>
+        <div class="card"><h4>System · Step 1</h4><p>Auto-calculates the order, pulling upcoming reservations, last week's same-day service, and last year's equivalent from POS and Resy.</p></div>
+        <div class="card"><h4>Step 2</h4><p>Reviews line items — sees each suggested quantity next to current on-hand stock.</p></div>
+        <div class="card"><h4>Step 3</h4><p>Flags low-confidence items where historical data is sparse, and uses their own judgment there.</p></div>
+        <div class="card"><h4>Step 4</h4><p>Adjusts quantities — edits any line item that doesn't match their read of the week.</p></div>
+        <div class="card"><h4>Outcome</h4><p>Confirms &amp; places the order — it goes out in minutes instead of cross-referencing par-sheets, invoices, and reservations by hand.</p></div>
+      </div>
+
+      <h4 style="margin-top:32px;">Recipe Input &amp; Scaling</h4>
+      <p style="font-style:italic; margin-bottom:16px;">"As a chef, I want to scale a recipe to my expected covers so prep and ordering both stay accurate."</p>
+      <div class="grid-3">
+        <div class="card"><h4>Trigger</h4><p>Opens a menu item — chef selects a dish (e.g. Roast Chicken) to build or edit its recipe.</p></div>
+        <div class="card"><h4>Step 1</h4><p>Inputs ingredients &amp; per-cover amounts, building out each ingredient quantity for a single cover.</p></div>
+        <div class="card"><h4>Step 2</h4><p>Sets the planner to expected covers, seeing each suggested quantity next to current on-hand stock.</p></div>
+        <div class="card"><h4>System · Step 3</h4><p>Scales every ingredient, recalculating per-cover quantities instantly across the whole recipe.</p></div>
+        <div class="card"><h4>System · Step 4</h4><p>Links to Suggested Orders — ingredient quantities feed the ordering algorithm, grounded in real dish needs.</p></div>
+        <div class="card"><h4>Outcome</h4><p>Dish changes stay in sync — any future recipe edit automatically updates ordering logic, no separate update step.</p></div>
+      </div>
+
+      <h4 style="margin-top:32px;">Inventory Guide</h4>
+      <p style="font-style:italic; margin-bottom:16px;">"As a chef, I want my inventory organized like my kitchen so I can assess stock without jumping between screens."</p>
+      <div class="grid-3">
+        <div class="card"><h4>Setup · One-Time</h4><p>Defines their own sections — chef adds, renames, and reorders sections to mirror the kitchen's real layout.</p></div>
+        <div class="card"><h4>Trigger</h4><p>Opens the full inventory view, starting a stock check, often walking the physical space with the app in hand.</p></div>
+        <div class="card"><h4>Step 1</h4><p>Scans section by section — walks the walk-in, dry storage, etc. in the order the sections are laid out.</p></div>
+        <div class="card"><h4>Step 2</h4><p>Checks on-hand vs. par vs. suggested — each item shows all three numbers side by side, no separate lookup needed.</p></div>
+        <div class="card"><h4>Step 3</h4><p>Flags critical/low stock items, catching shortfalls in real time as they're seen on the shelf.</p></div>
+        <div class="card"><h4>Outcome</h4><p>Submits or exports the order without leaving the screen — one consolidated view from start to finish.</p></div>
+      </div>
+
+      <h4 style="margin-top:32px;">Financial Reporting</h4>
+      <p style="font-style:italic; margin-bottom:16px;">"As an owner, I want to compare daily spend to last week and last year so I can catch cost creep early."</p>
+      <div class="grid-3">
+        <div class="card"><h4>Trigger</h4><p>Opens Financial Reporting — chef or owner checks in on spend, typically mid-week or after a service.</p></div>
+        <div class="card"><h4>System · Step 1</h4><p>Shows daily spend in context: this week's daily order spend vs. the same day last week and last year.</p></div>
+        <div class="card"><h4>Step 2</h4><p>Reads the product-mix chart — a pie chart breaking spend down by category (proteins, produce, dairy).</p></div>
+        <div class="card"><h4>Step 3</h4><p>Checks the weekly budget tracker: total spend so far against the week's budget.</p></div>
+        <div class="card"><h4>Step 4</h4><p>Spots a trend or anomaly — e.g. proteins creeping up to 38% of spend, or a day that consistently runs over.</p></div>
+        <div class="card"><h4>Outcome</h4><p>Chef tightens up the category running over; owner confirms the kitchen is within budget or revisits targets.</p></div>
+      </div>
+    </div>
+
+    <div class="process-block" id="visual-design">
+      <h3>Visual Design</h3>
+      <p>Wireframes established structure and hierarchy as I started to make decisions on visual design and branding.</p>
+      <div class="shot-row">
+        <figure class="shot">
+          <img src="assets/images/wireframe-sign-in.png" alt="Wireframe of sign in screen">
+          <figcaption>Sign In (wireframe)</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/images/wireframe-owner-welcome.png" alt="Wireframe of owner/manager welcome screen">
+          <figcaption>Owner/Manager Welcome (wireframe)</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/images/wireframe-recipe-builder.png" alt="Wireframe of recipe builder screen">
+          <figcaption>Recipe Builder (wireframe)</figcaption>
+        </figure>
+      </div>
+      <h4 style="margin-top:32px;">Branding &amp; Style Guide</h4>
+      <div class="shot-row">
+        <figure class="shot" style="grid-column: 1 / -1;">
+          <img src="assets/images/style-branding.png" alt="MiseOS branding and style guide, including logo, color palette, and typography">
+          <figcaption>Core brand elements: logo, color palette, and typography</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="process-block" id="development">
+      <h3>Development</h3>
+      <p>MiseOS was built and tested as a high-fidelity interactive prototype in Figma rather than a coded product. This capstone focused on research, interaction design, and validating the ordering logic end to end, not engineering implementation. The final V2 prototype includes full click-through flows for sign-in, recipe building and scaling, inventory walkthroughs, suggested ordering, and financial reporting.</p>
+    </div>
+  </div>
+</section>
+
+<section id="outcome">
+  <div class="wrap">
+    <p class="section-label">Outcome</p>
+    <h2>Current Status and Reflection</h2>
+    <p class="lead">MiseOS was built and tested as a high-fidelity interactive prototype in Figma. This capstone focused on research, interaction design, and validating the ordering logic end to end.</p>
+
+    <div class="shot-row">
+      <figure class="shot">
+        <img src="assets/images/v2-sign-in.png" alt="Final high-fidelity sign in screen">
+      </figure>
+      <figure class="shot">
+        <img src="assets/images/v2-financial.png" alt="Final high-fidelity financial reporting screen">
+      </figure>
+      <figure class="shot">
+        <img src="assets/images/v2-recipe-box-active.png" alt="Final high-fidelity recipe box screen">
+      </figure>
+    </div>
+    <p style="text-align:center; text-transform:uppercase; letter-spacing:0.08em; font-size:12px; font-weight:700; color:var(--ink-muted); margin-top:12px;">Final Prototypes</p>
+
+    <div class="grid-2" style="margin-top:32px;">
+      <div class="card">
+        <h4 style="color:var(--accent);">Next Steps</h4>
+        <p style="font-style:italic;">How do we explore integrations with existing restaurant technology?</p>
+      </div>
+      <div class="card">
+        <h4 style="color:var(--green);">Reflection</h4>
+        <p>Restaurants need clear, easy to use tools to help with tasks, like prep, inventory and ordering. There needs to be a balance between details and high level for the fast paced environments of restaurants.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>MiseOS. A UX capstone case study by Solace Naeymi.</p>
+  </div>
+</footer>
+
+</body>
+</html>
